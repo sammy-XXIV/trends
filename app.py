@@ -88,7 +88,38 @@ HTML = """
     padding: 24px 16px;
     max-width: 900px;
     margin: 0 auto;
+    transition: background 0.2s, color 0.2s;
   }
+  body.light {
+    background: #fff;
+    color: #000;
+  }
+  body.light .header { border-bottom-color: #000; }
+  body.light .header-right { color: #999; }
+  body.light .count { color: #bbb; }
+  body.light .article { border-bottom-color: #eee; }
+  body.light .article:hover { background: #f9f9f9; }
+  body.light .source { color: #aaa; }
+  body.light .pub { color: #ccc; }
+  body.light .summary { color: #aaa; }
+  body.light .tag { border-color: #ddd; color: #bbb; }
+  body.light .section-label { color: #bbb; border-top-color: #eee; }
+  body.light .trend-block { border-color: #eee; }
+  body.light .trend-name { color: #aaa; }
+  body.light .refresh-note { color: #ddd; }
+  body.light iframe { filter: grayscale(1); opacity: 0.8; }
+  .mode-toggle {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    background: none;
+    border: 1px solid currentColor;
+    color: inherit;
+    padding: 4px 10px;
+    cursor: pointer;
+    opacity: 0.4;
+  }
+  .mode-toggle:hover { opacity: 1; }
   .header {
     border-bottom: 1px solid #fff;
     padding-bottom: 16px;
@@ -232,7 +263,8 @@ HTML = """
   <div class="header-left">TRENDING NOW</div>
   <div class="header-right">
     REFRESHES HOURLY<br>
-    {{ now }}
+    {{ now }}<br><br>
+    <button class="mode-toggle" onclick="toggleMode()">LIGHT / DARK</button>
   </div>
 </div>
 
@@ -283,6 +315,18 @@ HTML = """
 </div>
 
 <div class="refresh-note">AUTO REFRESH — EVERY 60 MINUTES</div>
+
+<script>
+  function toggleMode() {
+    const isLight = document.body.classList.toggle('light');
+    localStorage.setItem('mode', isLight ? 'light' : 'dark');
+  }
+  (function() {
+    if (localStorage.getItem('mode') === 'light') {
+      document.body.classList.add('light');
+    }
+  })();
+</script>
 </body>
 </html>
 """
