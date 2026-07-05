@@ -37,6 +37,8 @@ def fetch_articles():
 
                 if title in seen:
                     continue
+                if title.startswith("http") or len(title) > 200:
+                    continue
 
                 text = (title + " " + summary).lower()
                 if not any(kw in text for kw in KEYWORDS):
@@ -149,6 +151,8 @@ HTML = """
     letter-spacing: 1px;
     line-height: 1.2;
     margin-top: 4px;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
   .title:hover { color: #ccc; }
   .summary {
