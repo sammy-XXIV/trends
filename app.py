@@ -54,13 +54,16 @@ def fetch_articles():
                     pub_str = pub
                     pub_ts = 0
 
+                import re as _re
+                clean_summary = _re.sub(r'<[^>]+>', '', summary)
+                clean_summary = _re.sub(r'https?://\S+', '', clean_summary).strip()
                 articles.append({
                     "title": title,
                     "link": link,
                     "source": source,
                     "pub": pub_str,
                     "pub_ts": pub_ts,
-                    "summary": summary[:200].strip() if summary else ""
+                    "summary": clean_summary[:200].strip() if clean_summary else ""
                 })
         except Exception as e:
             continue
