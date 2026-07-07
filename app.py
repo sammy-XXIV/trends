@@ -12,15 +12,35 @@ FEEDS = {
     "Google News — Epstein FBI": "https://news.google.com/rss/search?q=Epstein+FBI+Patel&hl=en-US&gl=US&ceid=US:en",
     "Google News — Pete Hegseth": "https://news.google.com/rss/search?q=Pete+Hegseth+Senate&hl=en-US&gl=US&ceid=US:en",
     "Google News — Pam Bondi": "https://news.google.com/rss/search?q=Pam+Bondi+Senate&hl=en-US&gl=US&ceid=US:en",
+    "Google News — Thomas Massie": "https://news.google.com/rss/search?q=Thomas+Massie+Patel&hl=en-US&gl=US&ceid=US:en",
+    "Google News — Adam Schiff": "https://news.google.com/rss/search?q=Adam+Schiff+Patel&hl=en-US&gl=US&ceid=US:en",
+    "Google News — Patel Fox News": "https://news.google.com/rss/search?q=Kash+Patel+Fox+News&hl=en-US&gl=US&ceid=US:en",
+    "Google News — FBI Scandal": "https://news.google.com/rss/search?q=FBI+scandal+2026&hl=en-US&gl=US&ceid=US:en",
+    "Google News — Epstein Files": "https://news.google.com/rss/search?q=Epstein+files+release&hl=en-US&gl=US&ceid=US:en",
+    "Google News — Van Hollen": "https://news.google.com/rss/search?q=Van+Hollen+Patel&hl=en-US&gl=US&ceid=US:en",
+    "Google News — Congress FBI": "https://news.google.com/rss/search?q=Congress+FBI+hearing&hl=en-US&gl=US&ceid=US:en",
     "The Hill": "https://thehill.com/rss/syndicator/19109",
     "Axios Politics": "https://api.axios.com/feed/politics",
     "CBS News Politics": "https://www.cbsnews.com/latest/rss/politics",
+    "NBC News Politics": "https://feeds.nbcnews.com/nbcnews/public/politics",
+    "NPR Politics": "https://feeds.npr.org/1014/rss.xml",
+    "Politico": "https://rss.politico.com/politics-news.xml",
+    "Raw Story": "https://www.rawstory.com/feed/",
+    "Daily Beast Politics": "https://www.thedailybeast.com/rss/politics",
+    "Newsweek Politics": "https://www.newsweek.com/rss/politics",
 }
 
 KEYWORDS = [
     "patel", "hegseth", "bondi", "epstein", "fbi", "senate", "hearing",
     "congress", "booker", "whitehouse", "swalwell", "massie", "schiff",
-    "van hollen", "lieu", "judiciary", "appropriations", "intelligence"
+    "van hollen", "lieu", "judiciary", "appropriations", "intelligence",
+    "deborah ross", "ross", "ted lieu", "madeleine dean", "raskin",
+    "blumenthal", "durbin", "senate judiciary", "house judiciary",
+    "bartiromo", "fox news", "whistleblower", "lawsuit", "defamation",
+    "drinking", "drunk", "atlantic", "scandal", "exposed", "bombshell",
+    "adam schiff", "thomas massie", "oversight", "accountability",
+    "doj", "department of justice", "attorney general", "classified",
+    "leaked", "documents", "records", "testimony", "perjury"
 ]
 
 def fetch_articles():
